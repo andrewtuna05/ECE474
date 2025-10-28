@@ -55,9 +55,9 @@ def figure_3_8():
     axes = axes.ravel()
 
     for idx, n in enumerate([2, 4, 8, 25]):
-        train_x = x_data[:n]
-        train_t = t_data[:n]
-        test_x = x_data[n]
+        train_x = x_data[:n-1]
+        train_t = t_data[:n-1]
+        test_x = x_data[n-1]
         
         x_plot = np.linspace(-1, 1, 200) # here we plot the 200 evenly spaced x values 
         means, stds = [], []
